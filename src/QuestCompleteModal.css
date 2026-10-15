@@ -1,0 +1,172 @@
+
+.quest-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: rgba(39, 24, 65, 0.62);
+  backdrop-filter: blur(7px);
+}
+
+.quest-modal {
+  position: relative;
+  width: 100%;
+  max-width: 460px;
+  padding: 30px;
+  border: 2px solid #e8d5ff;
+  border-radius: 28px;
+  background: linear-gradient(145deg, #fffaff, #f0edff, #fff3e5);
+  box-shadow: 0 20px 70px rgba(30, 15, 60, 0.3);
+  color: #49316f;
+  animation: questModalAppear 0.3s ease-out;
+}
+
+.quest-modal-stars {
+  text-align: center;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.quest-modal-icon {
+  display: grid;
+  place-items: center;
+  width: 76px;
+  height: 76px;
+  margin: 0 auto 14px;
+  border-radius: 24px;
+  background: linear-gradient(135deg, #e8d8ff, #ffe5ef);
+  font-size: 38px;
+}
+
+.quest-modal-label {
+  text-align: center;
+  color: #9870d7;
+  font-weight: 800;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+.quest-modal h2 {
+  text-align: center;
+  font-size: 27px;
+  margin: 8px 0;
+}
+
+.quest-modal-description {
+  text-align: center;
+  color: #817294;
+  line-height: 1.6;
+}
+
+.quest-modal-reward {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.quest-modal-reward span {
+  padding: 9px 12px;
+  border-radius: 12px;
+  background: #fff;
+  border: 1px solid #e7d9ff;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.quest-modal label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 9px;
+}
+
+.quest-modal-input {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px 13px;
+  border: 2px solid #d9c4ff;
+  border-radius: 15px;
+  background: white;
+}
+
+.quest-modal-input:focus-within {
+  border-color: #9870ed;
+  box-shadow: 0 0 0 4px rgba(152, 112, 237, 0.12);
+}
+
+.quest-modal-input input {
+  width: 100%;
+  min-width: 0;
+  padding: 12px 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #49316f;
+  font-size: 17px;
+}
+
+.quest-modal-input span {
+  color: #8d7ba8;
+  font-size: 13px;
+}
+
+.quest-modal-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.quest-modal-actions button {
+  flex: 1;
+  padding: 13px 10px;
+  border: none;
+  border-radius: 14px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.quest-modal-actions button:hover {
+  transform: translateY(-2px);
+}
+
+.quest-cancel-button {
+  color: #765b91;
+  background: #eee5fa;
+}
+
+.quest-confirm-button {
+  color: white;
+  background: linear-gradient(135deg, #a779ed, #ed8bc5);
+  box-shadow: 0 5px 12px rgba(167, 121, 237, 0.25);
+}
+
+@keyframes questModalAppear {
+  from {
+    opacity: 0;
+    transform: translateY(15px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (max-width: 480px) {
+  .quest-modal {
+    padding: 22px;
+  }
+
+  .quest-modal h2 {
+    font-size: 23px;
+  }
+
+  .quest-modal-actions {
+    flex-direction: column-reverse;
+  }
+}
