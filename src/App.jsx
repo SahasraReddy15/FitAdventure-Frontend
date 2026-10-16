@@ -3,7 +3,7 @@ import "./App.css";
 import "./QuestCompleteModal.css";
 import CastleMap from "./CastleMap";
 import WebcamWorkout from "./components/WebcamWorkout";
-const API_URL = "http://localhost:8080/api";
+const API_URL = "https://fitadventure-backend-production-2f1f.up.railway.app/api";
 
 const REWARDS = [
   { id: 1, name: "Magic Potion", icon: "🧪", cost: 10 },
